@@ -1,11 +1,21 @@
 import React from 'react';
+import { useDispatch } from 'react-redux'
+import { addFeautures } from '../Redux/Actions'
+
 
 const AdditionalFeature = props => {
+
+
+  const dispatch = useDispatch()
+
+  const haddleAddFeature = () => {
+    dispatch(addFeautures(props.feature, props.feature.price))
+
+  }
+
   return (
     <li>
-
-      {/* Add an onClick that will let you add a feature to your car */}
-      <button className="button">Add</button>
+      <button onClick={haddleAddFeature} className="button">Add</button>
       {props.feature.name} (+{props.feature.price})
     </li>
   );

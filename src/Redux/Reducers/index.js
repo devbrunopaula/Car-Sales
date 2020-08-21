@@ -2,7 +2,7 @@ import carReducer from './carReducer'
 import { combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
-    carReducer
+    car: carReducer
 })
 
 export default rootReducer

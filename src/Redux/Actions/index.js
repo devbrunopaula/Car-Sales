@@ -1,16 +1,21 @@
 import * as actions from '../Actions/carTypes'
 
 
-export const addFeautures = (part) => {
+export const addFeautures = (newFeature, price) => {
     return {
         type: actions.ADD_FEAUTURES,
-        payload: part
+        newFeature,
+        price
     }
 }
 
-export const removeFeautures = (id) => {
+
+
+export const removeFeautures = (id, price) => {
+    console.log('Action', id + ' ' + price)
     return {
         type: actions.REMOVE_FEAUTURES,
-        payload: id
+        id,
+        price
     }
 }
